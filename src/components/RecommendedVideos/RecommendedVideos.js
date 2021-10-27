@@ -1,5 +1,5 @@
 import React from "react";
-import Videos from "../../../data/videos.json";
+import Videos from "../../data/videos.json";
 
 export default function RecommendedVideos() {
   console.log(Videos);
