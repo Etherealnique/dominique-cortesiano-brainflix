@@ -1,0 +1,45 @@
+@use "../../styles/partials/variables.scss" as *;
+
+.description {
+  padding-left: 16px;
+  padding-right: 16px;
+  &__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: $BrainFlix-Black;
+    text-align: left;
+  }
+  &__container {
+    // display: flex;
+    // flex-direction: column;
+    height: 10rem;
+    padding-left: 16px;
+    padding-right: 16px;
+    &-middle {
+      display: flex;
+      padding-left: 16px;
+      padding-right: 16px;
+      border-top: solid 1px $Mercury;
+      border-bottom: solid 1px $Mercury;
+      color: $BrainFlix-Black;
+    }
+    &-left {
+      display: flex;
+      flex-direction: column;
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+    }
+    &-eye {
+      display: flex;
+    }
+    &-view {
+      display: flex;
+    }
+  }
+  &__body {
+    color: red;
+  }
+}
