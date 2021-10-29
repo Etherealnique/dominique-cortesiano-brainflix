@@ -1,9 +1,22 @@
 @use "../../styles/partials/variables.scss" as *;
 
-// .forum {
-// //   &__title {
-//     // color: $Alabaster;
+.forum {
+  &__title {
+    color: $Alabaster;
 
-//     // font-weight: 700;
-//   }
-// }
+    font-weight: 700;
+  }
+  &__comment-box {
+    padding: 20px;
+  }
+  &__button {
+    background-color: $BrainFlix-Blue;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: $White;
+    padding: 0.625rem 0.625rem 0.3125rem 0.625rem;
+    border-radius: 4%;
+    width: 286px;
+    box-shadow: none;
+  }
+}

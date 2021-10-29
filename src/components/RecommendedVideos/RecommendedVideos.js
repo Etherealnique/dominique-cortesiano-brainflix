@@ -1,11 +1,23 @@
 import React from "react";
-import Videos from "../../data/videos.json";
+import "./RecommendedVideos.scss";
 
-export default function RecommendedVideos() {
-  console.log(Videos);
+export default function RecommendedVideos(props) {
+  console.log(props);
+
   return (
     <div>
-      <h1>Recommended Videos Component</h1>
+      {props.recommVids.map((vid) => {
+        return (
+          <div>
+            <p onClick={props.handleClick}>
+              {vid.title},{vid.channel},
+            </p>
+            <img className="recommedated__image" src={vid.image} />
+            {/* <div url={vid.video}></div> */}
+            {/* <video src={vid.video} onPlaying={props.video} controls /> */}
+          </div>
+        );
+      })}
     </div>
   );
 }

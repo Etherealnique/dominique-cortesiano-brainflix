@@ -1,18 +1,31 @@
-import React from "react";
+import React, { Component } from "react";
 import Header from "../components/Header/Header";
-import HeroVideo from "../components/HeroVideo/HeroVideo";
 import RecommendedVideos from "../components/RecommendedVideos/RecommendedVideos";
-import Description from "../components/Description/Description";
+import Content from "../components/Content/Content";
 import Forum from "../components/Forum/Forum";
+import data from "../data/video-details.json";
 
-export default function Home() {
-  return (
-    <div>
-      <Header />
-      <HeroVideo />
-      <Description />
-      <Forum />
-      <RecommendedVideos />
-    </div>
-  );
+export default class Home extends Component {
+  state = {
+    heroVid: data[0],
+    recommVids: data,
+    forumComments: data[0],
+  };
+  handleClick = () => {
+    console.log("handleClick");
+  };
+  render() {
+    // console.log(this.state);
+    return (
+      <div>
+        <Header />
+        <Content heroVid={this.state.heroVid} />
+        <Forum forumComments={this.state.forumComments.comments} />
+        <RecommendedVideos
+          recommVids={this.state.recommVids}
+          handleClick={this.handleClick}
+        />
+      </div>
+    );
+  }
 }

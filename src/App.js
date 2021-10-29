@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.scss";
 import Home from "./pages/Home";
 // import DescriptionLikes from "./components/DescriptionLikes/DescriptionLikes";
-import Counter from "./components/Counter/Counter";
 
 export default class App extends Component {
   state = {
@@ -22,7 +21,7 @@ export default class App extends Component {
             this.handleButtonClick("What a beautiful click you just made");
           }}
         ></button>
-        <Counter heartImg={this.state.heartImg} />
+        {/* <Counter heartImg={this.state.heartImg} /> */}
       </div>
     );
   }
