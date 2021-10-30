@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import "./RecommendedVideos.scss";
 
 export default function RecommendedVideos(props) {
@@ -8,13 +9,18 @@ export default function RecommendedVideos(props) {
     <div>
       {props.recommVids.map((vid) => {
         return (
-          <div>
-            <p onClick={props.handleClick}>
+          <div key={uuidv4()} className="recommended__container">
+            <p
+              className="recommended__info"
+              onClick={(event) => props.handleClick(event, vid.id)}
+            >
               {vid.title},{vid.channel},
+              <img
+                className="recommended__image"
+                src={vid.image}
+                alt={vid.title}
+              />
             </p>
-            <img className="recommedated__image" src={vid.image} />
-            {/* <div url={vid.video}></div> */}
-            {/* <video src={vid.video} onPlaying={props.video} controls /> */}
           </div>
         );
       })}

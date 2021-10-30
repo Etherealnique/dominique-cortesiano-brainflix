@@ -1,4 +1,16 @@
-.recommedated__image {
+.recommended__image {
+  display: flex;
+  flex-direction: row;
   height: 100px;
-  width: 100px;
+  width: 150px;
+  border-radius: 10px;
+}
+
+.recommended__container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }

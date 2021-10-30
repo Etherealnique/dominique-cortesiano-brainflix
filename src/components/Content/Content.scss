@@ -1,8 +1,13 @@
-@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/variables" as *;
 
 .content {
-  padding-left: 16px;
-  padding-right: 16px;
+  // &__hero-video--image {
+  //   padding: 0;
+  // }
+  &__description {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   &__title {
     font-size: 24px;
     line-height: 32px;
@@ -10,36 +15,73 @@
     color: $BrainFlix-Black;
     text-align: left;
   }
+  &__likes {
+    padding: 0px;
+    margin-left: 35px;
+  }
+  &__eye {
+    display: inline-block;
+  }
   &__container {
-    // display: flex;
-    // flex-direction: column;
+    &-eye {
+      color: $Silver;
+      height: 30px;
+    }
+    &-views {
+      color: $Silver;
+    }
+  }
+  &__eye-image {
+    display: inline-block;
+    padding-right: 5px;
+  }
+  &__likes--icon {
+    display: inline-block;
+    padding-right: 15px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
     height: 10rem;
     padding-left: 16px;
     padding-right: 16px;
     &-middle {
       display: flex;
-      padding-left: 16px;
-      padding-right: 16px;
+      justify-content: space-between;
+
       border-top: solid 1px $Mercury;
       border-bottom: solid 1px $Mercury;
       color: $BrainFlix-Black;
     }
-    &-left {
-      display: flex;
-      flex-direction: column;
-    }
-    &-right {
-      display: flex;
-      flex-direction: column;
-    }
-    &-eye {
-      display: flex;
-    }
-    &-view {
-      display: flex;
-    }
+
+    // &-left {
+    // }
+    // &-right {
+    // }
+    // &-view {
+    // }
+  }
+
+  &__creator {
+    color: $BrainFlix-Black;
+    font-weight: 700;
+  }
+  &__date {
+    color: $Silver;
   }
   &__body {
-    color: red;
+    color: $BrainFlix-Black;
+
+    text-align: left;
+  }
+
+  &__comments {
+    text-align: left;
+    margin-left: 16px;
+    font-weight: 600;
+  }
+
+  &__hero-video--image {
+    width: 100vw;
   }
 }

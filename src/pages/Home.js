@@ -9,18 +9,25 @@ export default class Home extends Component {
   state = {
     heroVid: data[0],
     recommVids: data,
-    forumComments: data[0],
   };
-  handleClick = () => {
-    console.log("handleClick");
+  handleClick = (event, id) => {
+    // console.log(event, id);
+    const currentVid = this.state.recommVids.find((video) => video.id === id);
+    console.log(currentVid);
+
+    this.setState({
+      heroVid: currentVid,
+      recommVids: data.filter((video) => currentVid.id !== video.id),
+    });
   };
+
   render() {
     // console.log(this.state);
     return (
       <div>
         <Header />
         <Content heroVid={this.state.heroVid} />
-        <Forum forumComments={this.state.forumComments.comments} />
+        <Forum forumComments={this.state.heroVid} />
         <RecommendedVideos
           recommVids={this.state.recommVids}
           handleClick={this.handleClick}

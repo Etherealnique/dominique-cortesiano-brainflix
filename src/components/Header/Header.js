@@ -17,7 +17,7 @@ export default function Header() {
         ></input>
         <img className="header__avatar" alt="Mohan-muruge" src={avatar} />
       </div>
-      <button class="header__button" type="submit">
+      <button className="header__button" type="submit">
         UPLOAD
       </button>
     </div>

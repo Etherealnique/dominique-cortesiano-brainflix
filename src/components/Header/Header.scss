@@ -1,11 +1,13 @@
-@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
 
 .header {
   //   &__container {
   //     display: flex;
   //   }
   &__logo {
-    padding: 1rem;
+    height: 1.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   &__subsection {
     display: flex;
@@ -15,28 +17,36 @@
     background-image: url(../../assets/icons/search.svg);
     background-repeat: no-repeat;
     background-position: left center;
-    padding-left: 30px;
+    background-position-x: 10px;
+    padding-left: 90px;
     background-color: #fff;
-    border: 1px solid #000;
+    border: 1px solid $Mercury;
     box-shadow: none;
+    border-radius: 4px;
   }
   &__avatar {
     margin-left: 1rem;
-    height: 2.1875rem;
-    width: 2.1875rem;
+    height: 2.4rem;
+    width: 2.4rem;
     border-radius: 50%;
   }
   &__button {
     background-image: url(../../assets/icons/upload.svg);
     background-repeat: no-repeat;
     background-position: left center;
+    background-position-x: 10px;
     background-color: $BrainFlix-Blue;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    border: $BrainFlix-Blue;
+    margin: 1rem;
     color: $White;
-    padding: 0.625rem 0.625rem 0.3125rem 0.625rem;
-    border-radius: 4%;
-    width: 286px;
+    padding: 16px;
+    width: 290px;
+    min-height: 1rem;
     box-shadow: none;
+    border-radius: 4px;
+    &:hover {
+      background-color: $Brainflix-Darkblue;
+      border: $Brainflix-Darkblue;
+    }
   }
 }
