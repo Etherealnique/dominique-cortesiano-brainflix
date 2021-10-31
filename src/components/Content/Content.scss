@@ -5,7 +5,7 @@
   &__hero-video--image {
     width: 100vw;
     @include tablet {
-      height: 600px;
+      height: 37.5rem;
       background-color: black;
     }
   }
@@ -17,10 +17,10 @@
       padding-right: 36px;
     }
     @include desktop {
-      padding-left: 63px;
+      padding-left: 20px;
       padding-right: 63px;
       width: 50vw;
-      margin-left: 30px;
+      margin-left: 36px;
     }
   }
   &__title {
@@ -49,19 +49,24 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
       }
     }
     &-views {
       padding: 1rem 2rem 0.5rem 0;
       margin: 0;
+      @include tablet {
+        padding-top: 10px;
+      }
     }
-
     &-likes {
       margin: 0;
-      padding-right: 2.7rem;
+      padding-right: 3.105rem;
+      @include tablet {
+        padding-top: 10px;
+      }
     }
   }
-
   &__views-count {
     padding-bottom: 2px;
     margin: 0;
@@ -99,14 +104,14 @@
     display: inline-block;
     padding-right: 3px;
     @include tablet {
-      // margin-bottom: -2.5px;
+      margin-bottom: -2.1px;
     }
   }
   &__likes-icon {
     display: inline-block;
     padding-right: 6px;
     @include tablet {
-      // margin-bottom: -4px;
+      margin-bottom: -2.8px;
     }
   }
   &__container-right {
@@ -146,6 +151,9 @@
       font-size: 14px;
       line-height: 22px;
       margin-left: 0px;
+    }
+    @include desktop {
+      margin-bottom: 8px;
     }
   }
 }

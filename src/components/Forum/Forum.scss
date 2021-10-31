@@ -9,7 +9,7 @@
     padding-right: 36px;
   }
   @include desktop {
-    padding-left: 63px;
+    padding-left: 23px;
     padding-right: 63px;
     width: 50vw;
     padding-bottom: 200px;
@@ -18,27 +18,39 @@
   }
 
   &__form {
-    margin-right: -45px;
-    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    @include tablet {
+      flex-direction: row;
+      justify-content: left;
+      width: none;
+      padding-bottom: 15px;
+    }
+    @include desktop {
+      width: 50.5vw;
+    }
   }
 
   &__title {
-    text-align: left;
     color: $Silver;
-    margin-top: 1rem;
-    margin-bottom: -30.5px;
+    margin-bottom: -50.5px;
     font-size: 13px;
-    line-height: 18px;
     font-weight: 700;
-    padding-left: 30vw;
+    margin-right: 18px;
     @include tablet {
+      display: flex;
       font-size: 14px;
       line-height: 22px;
       font-weight: 400;
-      padding-left: 80px;
+      margin: 0px;
+      padding: 1rem 0 0 0;
+      margin-left: 49px;
+      margin-bottom: -10px;
     }
     @include desktop {
-      margin-left: -350px;
     }
   }
   &__avatar {
@@ -46,11 +58,14 @@
     height: 2.4rem;
     width: 2.4rem;
     border-radius: 50%;
-    margin-left: -3.7rem;
-    margin-right: 1rem;
+    margin-right: 17.6rem;
     margin-top: 20px;
     margin-bottom: -20px;
     position: sticky;
+    @include tablet {
+      margin: 0px;
+      margin-right: 10px;
+    }
   }
   &__comment-box {
     text-align: start;
@@ -68,12 +83,14 @@
     }
     @include tablet {
       height: 10px;
-      width: 58.5vw;
+      min-width: 28rem;
       padding-bottom: 1rem;
       padding-top: 1rem;
+      margin-right: 19px;
+      margin-left: 0px;
     }
     @include desktop {
-      width: 22.5vw;
+      min-width: 22rem;
     }
   }
   &__button {
@@ -85,7 +102,7 @@
     padding: 0.625rem 0.625rem 0.3125rem 0.625rem;
     border-radius: 4px;
     width: 225px;
-    margin-left: 10px;
+    margin-left: -1px;
     box-shadow: none;
     background-image: url(../../assets/icons/add_comment.svg);
     background-repeat: no-repeat;
@@ -93,9 +110,13 @@
     background-position-x: 10px;
     @include tablet {
       padding: 1rem 3.2rem;
-      width: 20vw;
+      width: 180px;
+      margin-right: 8px;
+      padding-left: 57px;
     }
-
+    @include desktop {
+      margin-right: 20px;
+    }
     &:hover {
       background-color: $Brainflix-Darkblue;
       border: $Brainflix-Darkblue;

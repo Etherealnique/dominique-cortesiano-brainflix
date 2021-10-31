@@ -10,14 +10,15 @@
     padding-right: 36px;
   }
   @include desktop {
-    padding-left: 63px;
+    padding-left: 30px;
     padding-right: 63px;
-    margin-left: 880px;
-    margin-top: -318px;
+    margin-left: 733px;
+    margin-top: -294px;
     width: 25vw;
     height: 890px;
     overflow: auto;
     position: fixed;
+    border-left: $Mercury solid 2px;
   }
   &__title {
     font-size: 13px;
@@ -32,17 +33,19 @@
       line-height: 22px;
     }
   }
-
   &__image {
-    height: 75px;
+    height: 70px;
     width: 125px;
     border-radius: 4px;
     object-fit: cover;
   }
-
   &__container {
     display: flex;
-    padding-top: 16px;
+    padding: 10px 0;
+    height: 70px;
+    @include tablet {
+      width: 40vw;
+    }
   }
   &__subtitle {
     width: 100%;
@@ -55,7 +58,8 @@
     line-height: 18px;
     padding-left: 16px;
     text-align: start;
-    margin-top: 0;
+    margin-top: 5.5px;
+    margin-bottom: 0px;
     @include desktop {
       font-size: 14px;
       line-height: 22px;
@@ -70,6 +74,7 @@
     color: $BrainFlix-Black;
     font-weight: 400;
     text-align: start;
+    margin-top: 7px;
     @include desktop {
       font-size: 14px;
       line-height: 22px;

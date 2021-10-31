@@ -4,7 +4,6 @@ import likes from "../../assets/icons/likes.svg";
 import "./Content.scss";
 
 export default function Content(props) {
-  console.log(props);
   return (
     <main className="content">
       <div className="content__hero-video">
@@ -28,16 +27,8 @@ export default function Content(props) {
               <img className="content__eye-icon" alt="views" src={views} />
               <p className="content__views-count">{props.heroVid.views}</p>
             </figure>
-
             <figure className="content__container-likes">
-              <img
-                onClick={() => {
-                  props.handleButtonClick(props.event);
-                }}
-                className="content__likes-icon"
-                src={likes}
-                alt="likes"
-              />
+              <img className="content__likes-icon" src={likes} alt="likes" />
               <p className="content__likes-count">{props.heroVid.likes}</p>
             </figure>
           </section>

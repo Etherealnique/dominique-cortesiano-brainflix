@@ -3,8 +3,6 @@ import { v4 as uuidv4 } from "uuid";
 import "./RecommendedVideos.scss";
 
 export default function RecommendedVideos(props) {
-  console.log(props);
-
   return (
     <div className="recommended">
       <p className="recommended__title">NEXT VIDEOS</p>

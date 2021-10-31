@@ -4,7 +4,6 @@ import avatar from "../../assets/images/Mohan-muruge.jpg";
 import "./Forum.scss";
 
 export default function Forum(props) {
-  console.log(uuidv4());
   return (
     <div key={123} className="forum">
       <p className="forum__title">JOIN THE CONVERSATION</p>
@@ -24,7 +23,6 @@ export default function Forum(props) {
       </form>
       <div className="forum__container">
         {props.forumComments.comments.map((comment) => {
-          // console.log(commentArr);
           return (
             <div className="forum__comments">
               <figure className="forum__avatar-blank"></figure>
