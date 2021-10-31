@@ -20,6 +20,7 @@ export default function Header() {
       <button className="header__button" type="submit">
         UPLOAD
       </button>
+      <img className="header__avatar-tablet" alt="Mohan-muruge" src={avatar} />
     </div>
   );
 }

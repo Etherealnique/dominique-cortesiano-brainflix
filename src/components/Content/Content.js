@@ -23,28 +23,23 @@ export default function Content(props) {
               {new Date(props.heroVid.timestamp).toLocaleDateString("en-US")}
             </p>
           </div>
-
           <section className="content__container-right">
-            <section className="content__container-eye">
-              <figure className="content__eye">
-                <img className="content__eye-image" alt="views" src={views} />
-                {props.heroVid.views}
-              </figure>
-            </section>
+            <figure className="content__container-views">
+              <img className="content__eye-icon" alt="views" src={views} />
+              <p className="content__views-count">{props.heroVid.views}</p>
+            </figure>
 
-            <section className="content__container-views">
-              <figure className="content__likes">
-                <img
-                  onClick={() => {
-                    props.handleButtonClick(props.event);
-                  }}
-                  className="content__likes--icon"
-                  src={likes}
-                  alt="likes"
-                />
-                <span className="content__views">{props.heroVid.likes}</span>
-              </figure>
-            </section>
+            <figure className="content__container-likes">
+              <img
+                onClick={() => {
+                  props.handleButtonClick(props.event);
+                }}
+                className="content__likes-icon"
+                src={likes}
+                alt="likes"
+              />
+              <p className="content__likes-count">{props.heroVid.likes}</p>
+            </figure>
           </section>
         </div>
         <p className="content__body">{props.heroVid.description}</p>

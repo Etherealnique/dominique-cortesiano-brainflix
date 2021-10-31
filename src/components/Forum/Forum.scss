@@ -1,24 +1,80 @@
 @use "../../styles/partials/variables" as *;
+@import "../../styles/partials/mixins";
 
 .forum {
   padding-left: 16px;
   padding-right: 16px;
-  &__title {
-    color: $Silver;
+  @include tablet {
+    padding-left: 36px;
+    padding-right: 36px;
   }
+  @include desktop {
+    padding-left: 63px;
+    padding-right: 63px;
+    width: 50vw;
+    padding-bottom: 200px;
+    position: fixed;
+    margin-left: 30px;
+  }
+
   &__form {
-    display: flex;
-    flex-direction: column;
+    margin-right: -45px;
+    position: sticky;
+  }
+
+  &__title {
+    text-align: left;
+    color: $Silver;
+    margin-top: 1rem;
+    margin-bottom: -30.5px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    padding-left: 30vw;
+    @include tablet {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      padding-left: 80px;
+    }
+    @include desktop {
+      margin-left: -350px;
+    }
   }
   &__avatar {
-    position: static;
-    margin-left: 1rem;
+    object-fit: fill;
     height: 2.4rem;
     width: 2.4rem;
     border-radius: 50%;
+    margin-left: -3.7rem;
+    margin-right: 1rem;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    position: sticky;
   }
   &__comment-box {
-    padding: 20px;
+    text-align: start;
+    border: $Silver solid 1.5px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    width: 210px;
+    height: 30px;
+    padding-top: -20px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+    &:focus {
+      outline: none;
+      border: solid 2px $BrainFlix-Blue;
+    }
+    @include tablet {
+      height: 10px;
+      width: 58.5vw;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+    }
+    @include desktop {
+      width: 22.5vw;
+    }
   }
   &__button {
     background-color: $BrainFlix-Blue;
@@ -27,20 +83,84 @@
     margin-bottom: 1rem;
     color: $White;
     padding: 0.625rem 0.625rem 0.3125rem 0.625rem;
-    border-radius: 4%;
-    width: 286px;
+    border-radius: 4px;
+    width: 225px;
+    margin-left: 10px;
     box-shadow: none;
+    background-image: url(../../assets/icons/add_comment.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 10px;
+    @include tablet {
+      padding: 1rem 3.2rem;
+      width: 20vw;
+    }
+
     &:hover {
       background-color: $Brainflix-Darkblue;
       border: $Brainflix-Darkblue;
     }
-    &__avatar-blank {
-      position: absolute;
-      height: 2.4rem;
-      width: 2.4rem;
-      background-color: $Mercury;
-      border-radius: 50%;
-      margin-left: 2vw;
+  }
+  &__avatar-blank {
+    position: absolute;
+    height: 2.4rem;
+    width: 2.4rem;
+    background-color: $Mercury;
+    border-radius: 50%;
+    margin-left: -3rem;
+  }
+  &__subsection {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__comments {
+    padding-left: 3rem;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    border-top: solid 1px $Mercury;
+    border-bottom: solid 1px $Mercury;
+    color: $BrainFlix-Black;
+    @include desktop {
+      line-height: 1.5rem;
+      line-height: 1.5rem;
+      min-height: 160px;
+    }
+  }
+  &__user {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+    @include desktop {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
+    @include desktop {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+  &__date {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: left;
+    color: $Mercury;
+    @include desktop {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
     }
   }
 }

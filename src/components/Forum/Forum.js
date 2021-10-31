@@ -8,9 +8,10 @@ export default function Forum(props) {
   return (
     <div key={123} className="forum">
       <p className="forum__title">JOIN THE CONVERSATION</p>
+
       <form className="forum__form">
-        <img className="forum__avatar" alt="Mohan-muruge" src={avatar} />
         <br />
+        <img className="forum__avatar" alt="Mohan-muruge" src={avatar} />
         <input
           className="forum__comment-box"
           type="text"
@@ -21,20 +22,23 @@ export default function Forum(props) {
           COMMENT
         </button>
       </form>
-      <div className="forum__comments">
+      <div className="forum__container">
         {props.forumComments.comments.map((comment) => {
           // console.log(commentArr);
           return (
-            <div key={uuidv4()}>
-              <p>{comment.name}</p>
-              <p>{comment.comment}</p>
-              <p>
-                {
-                  (comment.timestamp = new Date(
-                    comment.timestamp
-                  ).toLocaleDateString("en-US"))
-                }
-              </p>
+            <div className="forum__comments">
+              <figure className="forum__avatar-blank"></figure>
+              <div className="forum__subsection" key={uuidv4()}>
+                <p className="forum__user">{comment.name}</p>
+                <p className="forum__date">
+                  {
+                    (comment.timestamp = new Date(
+                      comment.timestamp
+                    ).toLocaleDateString("en-US"))
+                  }
+                </p>
+              </div>
+              <p className="forum__text">{comment.comment}</p>
             </div>
           );
         })}

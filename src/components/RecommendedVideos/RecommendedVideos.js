@@ -6,20 +6,25 @@ export default function RecommendedVideos(props) {
   console.log(props);
 
   return (
-    <div>
+    <div className="recommended">
+      <p className="recommended__title">NEXT VIDEOS</p>
       {props.recommVids.map((vid) => {
         return (
           <div key={uuidv4()} className="recommended__container">
-            <p
-              className="recommended__info"
+            <div
+              className="recommended__content"
               onClick={(event) => props.handleClick(event, vid.id)}
             >
-              {vid.title},{vid.channel},
               <img
                 className="recommended__image"
                 src={vid.image}
                 alt={vid.title}
               />
+            </div>
+
+            <p className="recommended__subtitle">
+              {vid.title}
+              <p className="recommended__creator">{vid.channel}</p>
             </p>
           </div>
         );

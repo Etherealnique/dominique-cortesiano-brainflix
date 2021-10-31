@@ -1,36 +1,64 @@
 @use "../../styles/partials/_variables.scss" as *;
+@import "../../styles/partials/mixins";
 
 .header {
-  //   &__container {
-  //     display: flex;
-  //   }
+  &__container {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      height: 4rem;
+      align-items: center;
+      align-items: left;
+    }
+  }
   &__logo {
     height: 1.7rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    @include tablet {
+      padding-left: 1.5rem;
+    }
   }
   &__subsection {
     display: flex;
     justify-content: center;
   }
   &__search-bar {
+    &:focus {
+      outline: none;
+      border: solid 2px $BrainFlix-Blue;
+    }
     background-image: url(../../assets/icons/search.svg);
     background-repeat: no-repeat;
     background-position: left center;
     background-position-x: 10px;
-    padding-left: 90px;
+    width: 190px;
+    padding-left: 2.4rem;
     background-color: #fff;
     border: 1px solid $Mercury;
     box-shadow: none;
     border-radius: 4px;
+    text-align: left;
+    padding-top: 5px;
+    @include tablet {
+      margin-left: 6rem;
+      width: 160px;
+      height: 30px;
+    }
   }
   &__avatar {
     margin-left: 1rem;
     height: 2.4rem;
     width: 2.4rem;
     border-radius: 50%;
+    @include tablet {
+      display: none;
+    }
   }
   &__button {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 10px;
     background-image: url(../../assets/icons/upload.svg);
     background-repeat: no-repeat;
     background-position: left center;
@@ -41,12 +69,25 @@
     color: $White;
     padding: 16px;
     width: 290px;
-    min-height: 1rem;
     box-shadow: none;
     border-radius: 4px;
     &:hover {
       background-color: $Brainflix-Darkblue;
       border: $Brainflix-Darkblue;
+    }
+    @include tablet {
+      width: 150px;
+      height: 2.5rem;
+    }
+  }
+  &__avatar-tablet {
+    display: none;
+    @include tablet {
+      display: block;
+      margin-left: 0.5rem;
+      height: 2.4rem;
+      width: 2.4rem;
+      border-radius: 50%;
     }
   }
 }

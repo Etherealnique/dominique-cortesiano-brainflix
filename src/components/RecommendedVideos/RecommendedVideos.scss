@@ -1,16 +1,78 @@
-.recommended__image {
-  display: flex;
-  flex-direction: row;
-  height: 100px;
-  width: 150px;
-  border-radius: 10px;
-}
+@use "../../styles/partials/variables" as *;
+@import "../../styles/partials/mixins";
 
-.recommended__container {
-  display: flex;
-  flex-direction: row;
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+.recommended {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  @include tablet {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  @include desktop {
+    padding-left: 63px;
+    padding-right: 63px;
+    margin-left: 880px;
+    margin-top: -318px;
+    width: 25vw;
+    height: 890px;
+    overflow: auto;
+    position: fixed;
+  }
+  &__title {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    text-align: left;
+    color: $Silver;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    @include tablet {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__image {
+    height: 75px;
+    width: 125px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  &__container {
+    display: flex;
+    padding-top: 16px;
+  }
+  &__subtitle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: $BrainFlix-Black;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    padding-left: 16px;
+    text-align: start;
+    margin-top: 0;
+    @include desktop {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &__creator {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    display: flex;
+    width: 120px;
+    color: $BrainFlix-Black;
+    font-weight: 400;
+    text-align: start;
+    @include desktop {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
 }

@@ -1,12 +1,27 @@
 @use "../../styles/partials/variables" as *;
+@import "../../styles/partials/mixins";
 
 .content {
-  // &__hero-video--image {
-  //   padding: 0;
-  // }
+  &__hero-video--image {
+    width: 100vw;
+    @include tablet {
+      height: 600px;
+      background-color: black;
+    }
+  }
   &__description {
     padding-left: 16px;
     padding-right: 16px;
+    @include tablet {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    @include desktop {
+      padding-left: 63px;
+      padding-right: 63px;
+      width: 50vw;
+      margin-left: 30px;
+    }
   }
   &__title {
     font-size: 24px;
@@ -14,74 +29,123 @@
     font-weight: 700;
     color: $BrainFlix-Black;
     text-align: left;
-  }
-  &__likes {
-    padding: 0px;
-    margin-left: 35px;
-  }
-  &__eye {
-    display: inline-block;
-  }
-  &__container {
-    &-eye {
-      color: $Silver;
-      height: 30px;
-    }
-    &-views {
-      color: $Silver;
+    @include tablet {
+      font-size: 33px;
+      line-height: 44px;
+      font-weight: 700;
+      margin-bottom: 0;
     }
   }
-  &__eye-image {
-    display: inline-block;
-    padding-right: 5px;
-  }
-  &__likes--icon {
-    display: inline-block;
-    padding-right: 15px;
-  }
   &__container {
-    display: flex;
-    flex-direction: column;
-    height: 10rem;
-    padding-left: 16px;
-    padding-right: 16px;
     &-middle {
       display: flex;
       justify-content: space-between;
-
       border-top: solid 1px $Mercury;
       border-bottom: solid 1px $Mercury;
       color: $BrainFlix-Black;
+      padding-top: 5px;
+      @include tablet {
+        border-top: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    &-views {
+      padding: 1rem 2rem 0.5rem 0;
+      margin: 0;
     }
 
-    // &-left {
-    // }
-    // &-right {
-    // }
-    // &-view {
-    // }
+    &-likes {
+      margin: 0;
+      padding-right: 2.7rem;
+    }
   }
 
-  &__creator {
-    color: $BrainFlix-Black;
-    font-weight: 700;
+  &__views-count {
+    padding-bottom: 2px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $Silver;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  &__likes-count {
+    margin: 0;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $Silver;
+    height: 30px;
+    display: inline-block;
+    @include tablet {
+      // display: block;
+    }
   }
   &__date {
+    padding-right: 10px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
     color: $Silver;
+    @include tablet {
+      display: inline-block;
+      margin-left: 30px;
+    }
+  }
+  &__eye-icon {
+    display: inline-block;
+    padding-right: 3px;
+    @include tablet {
+      // margin-bottom: -2.5px;
+    }
+  }
+  &__likes-icon {
+    display: inline-block;
+    padding-right: 6px;
+    @include tablet {
+      // margin-bottom: -4px;
+    }
+  }
+  &__container-right {
+    @include tablet {
+      display: flex;
+    }
+  }
+  &__creator {
+    color: $BrainFlix-Black;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+    @include tablet {
+      display: inline-block;
+    }
   }
   &__body {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
     color: $BrainFlix-Black;
-
     text-align: left;
+    @include tablet {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+      min-height: 130px;
+    }
   }
-
   &__comments {
+    font-size: 13px;
+    line-height: 18px;
     text-align: left;
     margin-left: 16px;
     font-weight: 600;
-  }
-
-  &__hero-video--image {
-    width: 100vw;
+    @include tablet {
+      font-size: 14px;
+      line-height: 22px;
+      margin-left: 0px;
+    }
   }
 }
