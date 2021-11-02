@@ -1,14 +1,38 @@
 import React, { Component } from "react";
 import "./App.scss";
 import Home from "./pages/Home";
-// import DescriptionLikes from "./components/DescriptionLikes/DescriptionLikes";
+import UploadPage from "./pages/UploadPage";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-export default class App extends Component {
+// import { Component } from "react";
+
+class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Home />
+      <div className="app">
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/uploadpage" component={UploadPage} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
 }
+
+export default App;
+
+/* function App() {
+  return (
+    <>
+      <nav />
+      <Nav></Nav>
+      <BrowserRouter>
+        <switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={UploadPage} />
+        </switch>
+      </BrowserRouter>
+    </>
+  ); */
