@@ -31,6 +31,9 @@
       outline: none;
       border: solid 2px $BrainFlix-Blue;
     }
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
     background-image: url(../../assets/icons/search.svg);
     background-repeat: no-repeat;
     background-position: left center;
@@ -57,6 +60,9 @@
     height: 2.4rem;
     width: 2.4rem;
     border-radius: 50%;
+    object-fit: cover;
+    background-position-y: 5px;
+
     @include tablet {
       display: none;
     }

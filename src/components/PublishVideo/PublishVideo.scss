@@ -1,0 +1,154 @@
+@use "../../styles/partials/variables" as *;
+@import "../../styles/partials/mixins";
+
+.publish-video {
+  margin-top: -5px;
+  border-top: solid 1px $Mercury;
+  &__container {
+    padding: 0 16px 0 16px;
+  }
+  &__title {
+    &-main {
+      margin-top: 1.5rem;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      color: $BrainFlix-Black;
+      text-align: start;
+      @include tablet {
+        font-size: 33px;
+        line-height: 44px;
+        font-weight: 700;
+      }
+    }
+    &-thumbnail {
+      text-align: start;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 400;
+      color: $Silver;
+      margin-bottom: 2px;
+      @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 700;
+      }
+    }
+  }
+  &__subsection {
+    text-align: start;
+  }
+  &__subtitle {
+    &-video {
+      text-align: start;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 400;
+      color: $Silver;
+      margin-bottom: 3px;
+      @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 700;
+      }
+      &--comment {
+        &:focus {
+          outline: none;
+          border: solid 2px $BrainFlix-Blue;
+        }
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+        padding-top: 8px;
+        padding-bottom: 7px;
+        width: 86vw;
+        padding-left: 0.5rem;
+        background-color: $Alabaster;
+        border: 1px solid $Mercury;
+        box-shadow: none;
+        border-radius: 0.25rem;
+        text-align: left;
+      }
+    }
+    &-description {
+      margin-top: 1rem;
+      margin-bottom: 3px;
+      text-align: start;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 400;
+      color: $Silver;
+      @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 700;
+      }
+      &--comment {
+        &:focus {
+          outline: none;
+          border: solid 2px $BrainFlix-Blue;
+        }
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+        width: 86vw;
+        padding-left: 0.5rem;
+        background-color: $Alabaster;
+        border: 1px solid $Mercury;
+        box-shadow: none;
+        border-radius: 0.25rem;
+        text-align: left;
+        padding-top: 8px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+  &__thumbnail {
+    height: 175px;
+    width: 287px;
+    border-radius: 5px;
+    object-fit: fill;
+  }
+
+  &__button {
+    &--publish {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 10px;
+      background-image: url(../../assets/icons/publish.svg);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-position-x: 10px;
+      background-color: $BrainFlix-Blue;
+      border: $BrainFlix-Blue;
+      margin: 1rem;
+      color: $White;
+      padding: 1rem;
+      margin: 1.5rem 0 1rem 0;
+      width: 287px;
+      box-shadow: none;
+      border-radius: 0.25rem;
+      &:hover {
+        background-color: $Brainflix-Darkblue;
+        border: $Brainflix-Darkblue;
+      }
+    }
+    &--cancel {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 10px;
+      background-image: url(../../assets/icons/publish.svg);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-position-x: 10px;
+      color: $BrainFlix-Blue;
+      border: $BrainFlix-Blue;
+      margin: 0.5rem 1rem 1rem 1rem;
+      background-color: $White;
+      padding: 1rem;
+      width: 15rem;
+      box-shadow: none;
+      border-radius: 0.25rem;
+    }
+  }
+}
