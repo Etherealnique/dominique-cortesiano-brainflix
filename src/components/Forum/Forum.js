@@ -21,7 +21,7 @@ export default function Forum(props) {
           COMMENT
         </button>
       </form>
-      <div className="forum__container">
+      {/* <div className="forum__container">
         {props.forumComments.comments.map((comment) => {
           return (
             <div className="forum__comments">
@@ -40,7 +40,7 @@ export default function Forum(props) {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 }
