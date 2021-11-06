@@ -4,7 +4,7 @@ import likes from "../../assets/icons/likes.svg";
 import "./Content.scss";
 
 export default function Content(props) {
-  console.log(props.heroVid.comments);
+  // console.log(props.heroVid.comments);
   return (
     <main className="content">
       <div className="content__hero-video">

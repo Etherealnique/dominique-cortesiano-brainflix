@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import "./RecommendedVideos.scss";
 
 export default function RecommendedVideos(props) {
-  console.log(props.recommVids);
+  // console.log(props.recommVids);
+  // console.log(props.heroVid.id);
   return (
     <div className="recommended">
       <p className="recommended__title">NEXT VIDEOS</p>
@@ -22,9 +23,10 @@ export default function RecommendedVideos(props) {
                   />
                 </Link>
               </div>
-
-              <p className="recommended__subtitle">{vid.title}</p>
-              <p className="recommended__creator">{vid.channel}</p>
+              <div className="recommended__subcontainer">
+                <p className="recommended__subtitle">{vid.title}</p>
+                <p className="recommended__creator">{vid.channel}</p>
+              </div>
             </div>
           );
         })}

@@ -30,10 +30,15 @@ export default function PublishVideo() {
             placeholder="Add a description to your video"
           ></input>
         </section>
+      </div>
+      <div className="publish-video__button--container">
+        <button className="publish-video__button--cancel-tablet" type="submit">
+          CANCEL
+        </button>
         <button className="publish-video__button--publish" type="submit">
           PUBLISH
         </button>
-        <button className="publish-video__button--cancel" type="submit">
+        <button className="publish-video__button--cancel-mobile" type="submit">
           CANCEL
         </button>
       </div>

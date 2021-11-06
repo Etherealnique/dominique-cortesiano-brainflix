@@ -13,6 +13,18 @@ export default class Home extends Component {
     heroVid: null,
     recommVids: null,
     isLoading: true,
+    comment: "",
+  };
+
+  handleChange = (event) => {
+    console.log("handlechange!", event.target.name);
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
   };
 
   componentDidMount() {
@@ -25,17 +37,18 @@ export default class Home extends Component {
         );
       })
       .then((res) => {
-        console.log(res.data);
         this.setState({ heroVid: res.data });
       })
 
-      .catch();
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(prevProps.match.params.id, "prev props");
-    console.log(prevState, "prev state");
-    console.log(this.props.match.params.id, "current props");
+    // console.log(prevProps.match.params.id, "prev props");
+    // console.log(prevState, "prev state");
+    // console.log(this.props.match.params.id, "current props");
     if (prevProps.match.params.id !== this.props.match.params.id) {
       axios
         .get(
