@@ -10,22 +10,28 @@
       text-align: start;
       padding: 0 24px 0 24px;
     }
+    @include desktop {
+      text-align: start;
+      padding: 0 97px 0 97px;
+    }
   }
   &__title {
     &-main {
-      margin-top: 1.5rem;
+      margin-top: 1.7rem;
       font-size: 24px;
       line-height: 32px;
       font-weight: 700;
       color: $BrainFlix-Black;
       text-align: start;
       @include tablet {
+        padding-bottom: 15px;
         border-bottom: 1px solid $Mercury;
         font-size: 33px;
         line-height: 44px;
         font-weight: 700;
       }
     }
+
     &-thumbnail {
       text-align: start;
       font-size: 13px;
@@ -40,8 +46,18 @@
       }
     }
   }
+
   &__subsection {
     text-align: start;
+    @include tablet {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $Mercury;
+    }
+    @include desktop {
+      padding-left: 27px;
+      border-bottom: 0px;
+      margin-top: -36px;
+    }
   }
   &__subtitle {
     &-video {
@@ -73,6 +89,12 @@
         box-shadow: none;
         border-radius: 0.25rem;
         text-align: left;
+        @include tablet {
+          width: 98.5%;
+        }
+        @include desktop {
+          width: 51vw;
+        }
       }
     }
     &-description {
@@ -87,6 +109,9 @@
         font-size: 14px;
         line-height: 22px;
         font-weight: 700;
+      }
+      @include desktop {
+        margin-top: 1.8rem;
       }
       &--comment {
         &:focus {
@@ -105,6 +130,12 @@
         text-align: left;
         padding-top: 8px;
         padding-bottom: 50px;
+        @include tablet {
+          width: 98.5%;
+        }
+        @include desktop {
+          padding-bottom: 100px;
+        }
       }
     }
   }
@@ -113,9 +144,14 @@
     width: 287px;
     border-radius: 5px;
     object-fit: fill;
+    border-radius: 10px;
     @include tablet {
       height: 30vw;
       width: 50vw;
+    }
+    @include desktop {
+      height: 17vw;
+      width: 33vw;
     }
   }
 
@@ -140,6 +176,10 @@
       &:hover {
         background-color: $Brainflix-Darkblue;
         border: $Brainflix-Darkblue;
+      }
+      @include tablet {
+        margin: 0;
+        width: 175px;
       }
     }
     &--cancel {
@@ -176,16 +216,30 @@
           background-position-x: 10px;
           color: $BrainFlix-Blue;
           border: $BrainFlix-Blue;
-          margin: 0.5rem 1rem 1rem 1rem;
           background-color: $White;
           padding: 1rem;
-          width: 15rem;
+          width: 175px;
           box-shadow: none;
           border-radius: 0.25rem;
         }
       }
     }
     &--container {
+      @include tablet {
+        display: flex;
+        justify-content: end;
+        margin: 1.5rem 1.5rem 0 1.5rem;
+      }
+      @include desktop {
+        margin-right: 6rem;
+      }
+    }
+  }
+  &__desktop--container {
+    text-align: start;
+    @include desktop {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $Mercury;
       display: flex;
     }
   }

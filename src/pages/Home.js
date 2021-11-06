@@ -16,16 +16,16 @@ export default class Home extends Component {
     comment: "",
   };
 
-  handleChange = (event) => {
-    console.log("handlechange!", event.target.name);
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
-  };
+  // handleChange = (event) => {
+  //   console.log("handlechange!", event.target.name);
+  //   this.setState({
+  //     [event.target.name]: event.target.value,
+  //   });
+  // };
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-  };
+  // handleSubmit = (event) => {
+  //   event.preventDefault();
+  // };
 
   componentDidMount() {
     axios

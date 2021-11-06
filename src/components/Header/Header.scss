@@ -48,10 +48,12 @@
     padding-top: 0.3125rem;
     @include tablet {
       margin-left: 8rem;
-      width: 175px;
+      width: 180px;
       height: 30px;
     }
     @include desktop {
+      padding-left: 3.2rem;
+      width: 195px;
       margin-left: 29rem;
     }
   }
