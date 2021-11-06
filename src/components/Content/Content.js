@@ -4,6 +4,7 @@ import likes from "../../assets/icons/likes.svg";
 import "./Content.scss";
 
 export default function Content(props) {
+  console.log(props.heroVid.comments);
   return (
     <main className="content">
       <div className="content__hero-video">
@@ -34,7 +35,11 @@ export default function Content(props) {
           </section>
         </div>
         <p className="content__body">{props.heroVid.description}</p>
-        <aside className="content__comments">3 comments</aside>
+        <aside>
+          <p className="content__comments">
+            {props.heroVid.comments.length} comments
+          </p>
+        </aside>
       </div>
     </main>
   );

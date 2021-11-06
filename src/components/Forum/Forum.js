@@ -5,7 +5,7 @@ import "./Forum.scss";
 
 export default function Forum(props) {
   return (
-    <div key={123} className="forum">
+    <div key={uuidv4()} className="forum">
       <p className="forum__title">JOIN THE CONVERSATION</p>
 
       <form className="forum__form">
@@ -21,7 +21,7 @@ export default function Forum(props) {
           COMMENT
         </button>
       </form>
-      {/* <div className="forum__container">
+      <div className="forum__container">
         {props.forumComments.comments.map((comment) => {
           return (
             <div className="forum__comments">
@@ -40,7 +40,7 @@ export default function Forum(props) {
             </div>
           );
         })}
-      </div> */}
+      </div>
     </div>
   );
 }

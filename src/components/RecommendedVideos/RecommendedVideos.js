@@ -4,32 +4,30 @@ import { Link } from "react-router-dom";
 import "./RecommendedVideos.scss";
 
 export default function RecommendedVideos(props) {
+  console.log(props.recommVids);
   return (
     <div className="recommended">
-      {/* <p className="recommended__title">NEXT VIDEOS</p>
-      {props.recommVids.map((vid) => {
-        return (
-          <div key={uuidv4()} className="recommended__container">
-            <div
-              className="recommended__content"
-              onClick={(event) => props.handleClick(event, vid.id)}
-            >
-              <Link to={`/vidoes/${}`}>
-              <img
-                className="recommended__image"
-                src={vid.image}
-                alt={vid.title}
-              />
-              </Link>
-            </div>
+      <p className="recommended__title">NEXT VIDEOS</p>
+      {props.recommVids
+        .filter((filteredarr) => filteredarr.id !== props.heroVid.id)
+        .map((vid) => {
+          return (
+            <div key={uuidv4()} className="recommended__container">
+              <div className="recommended__content">
+                <Link to={`/videos/${vid.id}`}>
+                  <img
+                    className="recommended__image"
+                    src={vid.image}
+                    alt={vid.title}
+                  />
+                </Link>
+              </div>
 
-            <p className="recommended__subtitle">
-              {vid.title}
+              <p className="recommended__subtitle">{vid.title}</p>
               <p className="recommended__creator">{vid.channel}</p>
-            </p>
-          </div>
-        );
-      })} */}
+            </div>
+          );
+        })}
     </div>
   );
 }
