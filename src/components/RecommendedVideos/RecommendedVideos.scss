@@ -16,8 +16,7 @@
     margin-top: -294px;
     width: 25vw;
     height: 890px;
-    overflow: auto;
-    position: fixed;
+    position: relative;
     border-left: $Mercury solid 2px;
   }
   &__title {
@@ -45,6 +44,9 @@
     height: 70px;
     @include tablet {
       width: 40vw;
+    }
+    @include desktop {
+      max-width: 25rem;
     }
   }
   &__subtitle {

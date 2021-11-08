@@ -5,10 +5,9 @@
   &__container {
     @include tablet {
       display: flex;
-      flex-direction: row;
       height: 4rem;
       align-items: center;
-      align-items: left;
+      max-width: 20vw;
     }
   }
   &__logo {
@@ -48,12 +47,12 @@
     padding-top: 0.3125rem;
     @include tablet {
       margin-left: 8rem;
-      width: 180px;
-      height: 30px;
+      width: 11.25rem;
+      height: 1.875rem;
     }
     @include desktop {
       padding-left: 3.2rem;
-      width: 195px;
+      width: 12.1875rem;
       margin-left: 29rem;
     }
   }
@@ -76,7 +75,7 @@
     background-image: url(../../assets/icons/upload.svg);
     background-repeat: no-repeat;
     background-position: left center;
-    background-position-x: 10px;
+    background-position-x: 0.625rem;
     background-color: $BrainFlix-Blue;
     border: $BrainFlix-Blue;
     margin: 1rem;
@@ -90,9 +89,9 @@
       border: $Brainflix-Darkblue;
     }
     @include tablet {
-      width: 150px;
+      width: 9.375rem;
       height: 2.5rem;
-      padding-left: 25.5px;
+      padding-left: 1.59375rem;
     }
   }
   &__avatar-tablet {

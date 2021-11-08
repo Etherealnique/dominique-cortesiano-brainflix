@@ -24,7 +24,7 @@
       color: $BrainFlix-Black;
       text-align: start;
       @include tablet {
-        padding-bottom: 15px;
+        padding-bottom: 0.9375rem;
         border-bottom: 1px solid $Mercury;
         font-size: 33px;
         line-height: 44px;
@@ -38,7 +38,7 @@
       line-height: 18px;
       font-weight: 400;
       color: $Silver;
-      margin-bottom: 2px;
+      margin-bottom: 0.125rem;
       @include tablet {
         font-size: 14px;
         line-height: 22px;
@@ -50,13 +50,13 @@
   &__subsection {
     text-align: start;
     @include tablet {
-      padding-bottom: 20px;
+      padding-bottom: 1.25rem;
       border-bottom: 1px solid $Mercury;
     }
     @include desktop {
-      padding-left: 27px;
+      padding-left: 1.6875rem;
       border-bottom: 0px;
-      margin-top: -36px;
+      margin-top: -2.25rem;
     }
   }
   &__subtitle {
@@ -66,7 +66,7 @@
       line-height: 18px;
       font-weight: 400;
       color: $Silver;
-      margin-bottom: 3px;
+      margin-bottom: 0.1875rem;
       @include tablet {
         font-size: 14px;
         line-height: 22px;
@@ -80,8 +80,8 @@
         font-size: 13px;
         line-height: 18px;
         font-weight: 400;
-        padding-top: 8px;
-        padding-bottom: 7px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.4375rem;
         width: 86vw;
         padding-left: 0.5rem;
         background-color: $Alabaster;
@@ -90,7 +90,7 @@
         border-radius: 0.25rem;
         text-align: left;
         @include tablet {
-          width: 98.5%;
+          width: 90vw;
         }
         @include desktop {
           width: 51vw;
@@ -99,7 +99,7 @@
     }
     &-description {
       margin-top: 1rem;
-      margin-bottom: 3px;
+      margin-bottom: 0.1875rem;
       text-align: start;
       font-size: 13px;
       line-height: 18px;
@@ -128,20 +128,23 @@
         box-shadow: none;
         border-radius: 0.25rem;
         text-align: left;
-        padding-top: 8px;
-        padding-bottom: 50px;
+        padding-top: 0.5rem;
+        padding-bottom: 3.125rem;
         @include tablet {
-          width: 98.5%;
+          width: 90vw;
         }
         @include desktop {
-          padding-bottom: 100px;
+          @include desktop {
+            width: 51vw;
+          }
+          padding-bottom: 6.25rem;
         }
       }
     }
   }
   &__thumbnail {
-    height: 175px;
-    width: 287px;
+    height: 10.9375rem;
+    width: 17.9375rem;
     border-radius: 5px;
     object-fit: fill;
     border-radius: 10px;
@@ -179,7 +182,7 @@
       }
       @include tablet {
         margin: 0;
-        width: 175px;
+        width: 10.9375rem;
       }
     }
     &--cancel {
@@ -218,7 +221,7 @@
           border: $BrainFlix-Blue;
           background-color: $White;
           padding: 1rem;
-          width: 175px;
+          width: 10.9375rem;
           box-shadow: none;
           border-radius: 0.25rem;
         }
@@ -229,6 +232,7 @@
         display: flex;
         justify-content: end;
         margin: 1.5rem 1.5rem 0 1.5rem;
+        max-width: 91vw;
       }
       @include desktop {
         margin-right: 6rem;
@@ -238,7 +242,7 @@
   &__desktop--container {
     text-align: start;
     @include desktop {
-      padding-bottom: 20px;
+      padding-bottom: 1.25rem;
       border-bottom: 1px solid $Mercury;
       display: flex;
     }

@@ -21,6 +21,7 @@ export default function Forum(props) {
           COMMENT
         </button>
       </form>
+
       <div className="forum__container">
         {props.forumComments.comments.map((comment) => {
           return (
