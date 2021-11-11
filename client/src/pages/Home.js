@@ -5,8 +5,7 @@ import Content from "../components/Content/Content";
 import Forum from "../components/Forum/Forum";
 import axios from "axios";
 
-const API_URL =
-  "https://project-2-api.herokuapp.com/videos?api_key=4647dc9f-39c6-41bf-a778-3df80b284b52";
+const API_URL = "http://localhost:8080";
 
 export default class Home extends Component {
   state = {
@@ -19,13 +18,7 @@ export default class Home extends Component {
     axios
       .get(API_URL)
       .then((res) => {
-        this.setState({ recommVids: res.data });
-        return axios.get(
-          `https://project-2-api.herokuapp.com/videos/${res.data[0].id}?api_key=4647dc9f-39c6-41bf-a778-3df80b284b52`
-        );
-      })
-      .then((res) => {
-        this.setState({ heroVid: res.data });
+        this.setState({ recommVids: res.data, heroVid: res.data[0] });
       })
 
       .catch((err) => {
@@ -39,9 +32,7 @@ export default class Home extends Component {
     // console.log(this.props.match.params.id, "current props");
     if (prevProps.match.params.id !== this.props.match.params.id) {
       axios
-        .get(
-          `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}?api_key=4647dc9f-39c6-41bf-a778-3df80b284b52`
-        )
+        .get(`http://localhost:8080/videos/${this.props.match.params.id}`)
         .then((response) => {
           this.setState({ heroVid: response.data });
         })
