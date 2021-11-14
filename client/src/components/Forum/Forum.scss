@@ -13,7 +13,7 @@
     padding-right: 63px;
     width: 50vw;
     padding-bottom: 200px;
-    position: fixed;
+    position: relative;
     margin-left: 30px;
   }
 
@@ -133,6 +133,9 @@
   &__subsection {
     display: flex;
     justify-content: space-between;
+    @include desktop {
+      max-width: 38rem;
+    }
   }
   &__comments {
     padding-left: 3rem;

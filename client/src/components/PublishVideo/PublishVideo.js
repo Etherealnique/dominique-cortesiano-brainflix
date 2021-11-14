@@ -46,28 +46,32 @@ export default function PublishVideo({ history }) {
               type="text"
               placeholder="Add a title to your video"
             ></input>
-            <p className="publish-video__subtitle-description">
-              ADD A VIDEO DESCRIPTION
-            </p>
-            <input
-              name="description"
-              className="publish-video__subtitle-description--comment"
-              type="text"
-              placeholder="Add a description to your video"
-            ></input>
-            <button className="publish-video__button--publish" type="submit">
-              PUBLISH
-            </button>
+            <div className="publish-video__button--divider">
+              <p className="publish-video__subtitle-description">
+                ADD A VIDEO DESCRIPTION
+              </p>
+              <input
+                name="description"
+                className="publish-video__subtitle-description--comment"
+                type="text"
+                placeholder="Add a description to your video"
+              ></input>
+            </div>
+            <div className="publish-video__button--container">
+              <button className="publish-video__button--cancel-tablet">
+                CANCEL
+              </button>
+              <button className="publish-video__button--publish" type="submit">
+                PUBLISH
+              </button>
+              <button className="publish-video__button--cancel-mobile">
+                CANCEL
+              </button>
+            </div>
           </form>
         </div>
       </div>
-      <div className="publish-video__button--container">
-        <button className="publish-video__button--cancel-tablet">CANCEL</button>
-        <button className="publish-video__button--publish" type="submit">
-          PUBLISH
-        </button>
-        <button className="publish-video__button--cancel-mobile">CANCEL</button>
-      </div>
+      <hr className="publish-video__button--desktop-divider" />
     </main>
   );
 }

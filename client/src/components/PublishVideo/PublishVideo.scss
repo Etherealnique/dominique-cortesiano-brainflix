@@ -51,7 +51,6 @@
     text-align: start;
     @include tablet {
       padding-bottom: 1.25rem;
-      border-bottom: 1px solid $Mercury;
     }
     @include desktop {
       padding-left: 1.6875rem;
@@ -153,8 +152,8 @@
       width: 50vw;
     }
     @include desktop {
-      height: 17vw;
-      width: 33vw;
+      height: 15rem;
+      width: 27rem;
     }
   }
 
@@ -231,20 +230,44 @@
       @include tablet {
         display: flex;
         justify-content: end;
-        margin: 1.5rem 1.5rem 0 1.5rem;
-        max-width: 91vw;
+        margin: 1.5rem 1.8rem 0 1.5rem;
+        max-width: 95vw;
       }
       @include desktop {
-        margin-right: 6rem;
+        padding-top: 3rem;
+        max-width: 200rem;
+        margin-right: 0rem;
+      }
+    }
+    &--divider {
+      display: none;
+      @include tablet {
+        display: block;
+        border-bottom: 1px solid $Mercury;
+        padding-bottom: 1.5rem;
+        margin: 0rem;
+        max-width: 92vw;
+      }
+      @include desktop {
+        padding: 0;
+        margin: 0;
+        border-bottom: 0;
       }
     }
   }
   &__desktop--container {
     text-align: start;
     @include desktop {
-      padding-bottom: 1.25rem;
-      border-bottom: 1px solid $Mercury;
       display: flex;
     }
+  }
+}
+.publish-video__button--desktop-divider {
+  display: none;
+  @include desktop {
+    display: block;
+    width: 86vw;
+    border: 1px solid $Mercury;
+    margin-top: -5.5rem;
   }
 }

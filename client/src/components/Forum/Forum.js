@@ -27,7 +27,7 @@ export default function Forum(props, i) {
               <figure className="forum__avatar-blank"></figure>
               <div className="forum__subsection" key={i}>
                 <p className="forum__user">{comment.name}</p>
-                <p className="forum__likes">{comment.likes} likes</p>
+
                 <p className="forum__date">
                   {
                     (comment.timestamp = new Date(
