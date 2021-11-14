@@ -1,9 +1,30 @@
-// import React, { Component } from "react";
 import React from "react";
+import axios from "axios";
 import "./PublishVideo.scss";
 import thumbnail from "../../assets/images/venice-canal.jpg";
 
-export default function PublishVideo() {
+const API_URL = "http://localhost:8080";
+
+export default function PublishVideo({ history }) {
+  const uploadVid = (event) => {
+    event.preventDefault();
+    const newSingleVid = {
+      title: event.target.title.value,
+      description: event.target.description.value,
+      image: `${API_URL}/images/venice-canal.jpg`,
+    };
+
+    axios
+      .post("http://localhost:8080/videos", newSingleVid)
+      .then(() => console.log("You posted a new video!"))
+      .catch((err) => {
+        console.log(err);
+      });
+
+    alert("Successful Upload!");
+    history.push("/");
+  };
+
   return (
     <main className="publish-video">
       <div className="publish-video__container">
@@ -16,9 +37,11 @@ export default function PublishVideo() {
             alt="venice-canal"
             src={thumbnail}
           />
-          <section className="publish-video__subsection">
+
+          <form onSubmit={uploadVid} className="publish-video__subsection">
             <p className="publish-video__subtitle-video">TITLE YOUR VIDEO</p>
             <input
+              name="title"
               className="publish-video__subtitle-video--comment"
               type="text"
               placeholder="Add a title to your video"
@@ -27,23 +50,23 @@ export default function PublishVideo() {
               ADD A VIDEO DESCRIPTION
             </p>
             <input
+              name="description"
               className="publish-video__subtitle-description--comment"
               type="text"
               placeholder="Add a description to your video"
             ></input>
-          </section>
+            <button className="publish-video__button--publish" type="submit">
+              PUBLISH
+            </button>
+          </form>
         </div>
       </div>
       <div className="publish-video__button--container">
-        <button className="publish-video__button--cancel-tablet" type="submit">
-          CANCEL
-        </button>
+        <button className="publish-video__button--cancel-tablet">CANCEL</button>
         <button className="publish-video__button--publish" type="submit">
           PUBLISH
         </button>
-        <button className="publish-video__button--cancel-mobile" type="submit">
-          CANCEL
-        </button>
+        <button className="publish-video__button--cancel-mobile">CANCEL</button>
       </div>
     </main>
   );

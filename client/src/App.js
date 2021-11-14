@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.scss";
+import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import UploadPage from "./pages/UploadPage";
 
@@ -10,9 +11,15 @@ class App extends Component {
     return (
       <div className="app">
         <BrowserRouter>
+          <Header />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/uploadpage" component={UploadPage} />
+            <Route
+              path="/uploadpage"
+              render={(props) => {
+                return <UploadPage {...props} />;
+              }}
+            />
             <Route path="/videos/:id" component={Home} />
           </Switch>
         </BrowserRouter>

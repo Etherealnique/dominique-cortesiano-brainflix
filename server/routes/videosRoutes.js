@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
+const uniqid = require("uniqid");
 
 let queueList = [];
 
@@ -30,9 +31,38 @@ router.get(`/:id`, (req, res) => {
 });
 
 router.post(`/`, (req, res) => {
+  const { title, image, description } = req.body;
   const newVid = {
-    title: req.body.title,
-    description: req.body.description,
+    title,
+    image,
+    description,
+    channel: "DDizzle",
+    views: "632,893",
+    likes: "230,145",
+    duration: "5:01",
+    video: "https://project-2-api.herokuapp.com/stream",
+    timestamp: Date.now(),
+    comments: [
+      {
+        name: "Jesse S",
+        comment: "I like cars that go beep beep.",
+        likes: 1,
+        timestamp: 1628522461792,
+      },
+      {
+        name: "Arvino E",
+        comment: "I like taking nappy naps.",
+        likes: 999999,
+        timestamp: 1628544461792,
+      },
+      {
+        name: "Josh D",
+        comment: "Nice video DDizzle!",
+        likes: 756,
+        timestamp: 1628522461792,
+      },
+    ],
+    id: uniqid(),
   };
 
   queueList.push(newVid);

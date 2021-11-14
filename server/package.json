@@ -7,6 +7,7 @@
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "proxy": "http://localhost:8080/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Etherealnique/dominique-cortesiano-brainflix.git"
@@ -19,6 +20,10 @@
   "homepage": "https://github.com/Etherealnique/dominique-cortesiano-brainflix#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "dotenv": "^10.0.0",
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "uniqid": "^5.4.0"
   }
 }

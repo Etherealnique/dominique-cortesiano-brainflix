@@ -1,11 +1,10 @@
 import React from "react";
-import { v4 as uuidv4 } from "uuid";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import "./Forum.scss";
 
-export default function Forum(props) {
+export default function Forum(props, i) {
   return (
-    <div key={uuidv4()} className="forum">
+    <div key={i} className="forum">
       <p className="forum__title">JOIN THE CONVERSATION</p>
 
       <form className="forum__form">
@@ -21,14 +20,14 @@ export default function Forum(props) {
           COMMENT
         </button>
       </form>
-
       <div className="forum__container">
-        {props.forumComments.comments.map((comment) => {
+        {props.forumComments.comments.map((comment, i) => {
           return (
             <div className="forum__comments">
               <figure className="forum__avatar-blank"></figure>
-              <div className="forum__subsection" key={uuidv4()}>
+              <div className="forum__subsection" key={i}>
                 <p className="forum__user">{comment.name}</p>
+                <p className="forum__likes">{comment.likes} likes</p>
                 <p className="forum__date">
                   {
                     (comment.timestamp = new Date(

@@ -1,13 +1,11 @@
 // import React, { Component } from "react";
 import React from "react";
-import Header from "../components/Header/Header";
 import PublishVideo from "../components/PublishVideo/PublishVideo";
 
-export default function UploadPage() {
+export default function UploadPage({ history }) {
   return (
     <div>
-      <Header />
-      <PublishVideo />
+      <PublishVideo history={history} />
     </div>
   );
 }
